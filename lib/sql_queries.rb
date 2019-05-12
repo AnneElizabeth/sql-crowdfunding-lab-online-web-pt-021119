@@ -12,16 +12,10 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
   GROUP BY title;"
 end
 
-def selects_the_titles_of_all_projects_and_their_pledge_amounts
-  "SELECT projects.title, sum(pledges.amount) FROM projects
-  JOIN pledges ON projects.id = pledges.project_id;"
-end
-
-
-
-
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
-"Write your SQL query Here"
+  "SELECT users.name, users.age, sum(pledges.amount) FROM users
+  JOIN pledges ON users.id = pledges.user_id
+  GROUP BY users.name;"
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
