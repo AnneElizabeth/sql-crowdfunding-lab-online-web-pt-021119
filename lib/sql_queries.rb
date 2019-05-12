@@ -13,8 +13,8 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
 end
 
 def selects_the_titles_of_all_projects_and_their_pledge_amounts
-"SELECT Projects.title, SUM(amount) FROM projects, pledges GROUP BY pledges.project_id, 
-Projects.title HAVING Projects.id = pledges.project_id ORDER BY projects.title ASC;" 
+"SELECT Projects.title, SUM(amount) FROM projects, pledges GROUP BY pledges.project_id,
+Projects.title HAVING Projects.id = pledges.project_id ORDER BY projects.title ASC;"
 end
 
 
